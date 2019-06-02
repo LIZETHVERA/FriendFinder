@@ -6,11 +6,13 @@ var friendsInfo = require("../data/friends.js");
 router.get("/friends", function (req, res) {
   
     return res.json(friendsInfo);
-    
+
 });
 
 router.post("/friends", function (req, res) {
   var newFriend = req.body;
+  console.log(newFriend);
+  
   
   newFriend.routeName = newFriend.name.replace(/\s+/g, "").toLowerCase();
 

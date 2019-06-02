@@ -187,7 +187,7 @@
 
     </div>
   </div>
-<!-- 
+
   <script type="text/javascript">
     // Chosen CSS
     var config = {
@@ -213,6 +213,7 @@
     // Capture the form inputs
     $("#submit").on("click", function(event) {
       event.preventDefault();
+
 
       // Form validation
       function validateForm() {
@@ -253,7 +254,8 @@
         };
 
         // AJAX post the data to the friends API.
-        $.post("/api/friends", newFriend, function(data) {
+        $.post("/api/friends", newFriend, function(data) { 
+             
 
           // Grab the result from the AJAX post so that the best match's name and photo are displayed.
           $("#match-name").text(data.name);
@@ -267,10 +269,7 @@
         alert("Please fill out all fields before submitting!");
       }
     });
-  </script> -->
+  </script>
 
-
-<script src="./survey.js"></script>
 </body>
-
 </html>
